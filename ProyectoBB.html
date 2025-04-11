@@ -66,11 +66,25 @@
         .reference-section .btn {
             margin-top: 10px;
         }
+        /* Carrusel */
+        .carousel-item img {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+        }
     </style>
     <script>
         function showSection(sectionId) {
             document.querySelectorAll('.content > div').forEach(div => div.style.display = 'none');
             document.getElementById(sectionId).style.display = 'block';
+
+            // Ocultar el carrusel cuando se cambia de sección
+            const carousel = document.getElementById('carousel');
+            if (sectionId !== 'intro') {
+                carousel.style.display = 'none';
+            } else {
+                carousel.style.display = 'block';
+            }
         }
     </script>
 </head>
@@ -103,13 +117,38 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#" onclick="showSection('referencias')">Referencias</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showSection('redes')">Redes Sociales</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
     
     <div class="content">
-        
+        <!-- Carrusel de imágenes -->
+        <div id="carousel" class="carousel slide" data-bs-ride="carousel" style="display: block;">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://wallpapers.com/images/hd/grunge-yellow-breaking-bad-poster-bkbu0hjpevu9ouog.jpg" class="d-block w-100" alt="Breaking Bad 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1BdZ7kAZ-uCv_39JY2rYd6lPUWlIO-r8mVA&s" class="d-block w-100" alt="Breaking Bad 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://wallpapers.com/images/hd/breaking-bad-walter-anime-art-8xoio6hve0k0gam6.jpg" class="d-block w-100" alt="Breaking Bad 3">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
         <div id="intro" class="intro-box">
             <h2>Sobre Breaking Bad</h2>
             <p><em>Breaking Bad</em> es una aclamada serie de televisión dramática estadounidense creada y producida por Vince Gilligan. Se emitió originalmente en AMC durante cinco temporadas, desde el 20 de enero de 2008 hasta el 29 de septiembre de 2013.</p>
@@ -136,39 +175,101 @@
 
         <div id="referencias" class="reference-section" style="display: none;">
             <h3>Referencias</h3>
-            
             <div>
                 <h4>Imagen de Fondo</h4>
                 <p>La imagen de fondo utilizada proviene de <a href="https://images5.alphacoders.com/287/287897.jpg" target="_blank">Alpha Coders</a>.</p>
                 <a href="https://images5.alphacoders.com/287/287897.jpg" class="btn btn-primary" target="_blank">Ver Imagen</a>
             </div>
             <hr>
-            
             <div>
                 <h4>Fuentes</h4>
                 <p>Las fuentes estilísticas utilizadas en esta página son proporcionadas por <a href="https://fonts.google.com/specimen/Roboto" target="_blank">Google Fonts (Roboto)</a>.</p>
                 <a href="https://fonts.google.com/specimen/Roboto" class="btn btn-primary" target="_blank">Ver Fuentes</a>
             </div>
-            <hr>
+        </div>
 
-            <div>
-                <h4>Logo de Breaking Bad</h4>
-                <p>El logo utilizado en esta página proviene de <a href="https://upload.wikimedia.org/wikipedia/commons/7/77/Breaking_Bad_logo.svg" target="_blank">Wikipedia</a>.</p>
-                <a href="https://upload.wikimedia.org/wikipedia/commons/7/77/Breaking_Bad_logo.svg" class="btn btn-primary" target="_blank">Ver Logo</a>
+        <!-- Redes Sociales -->
+        <div id="redes" class="intro-box" style="display:none;">
+            <h2>Redes Sociales de Actores de Breaking Bad</h2>
+
+            <!-- Redes sociales de Aaron Paul (Jesse Pinkman) -->
+            <div class="intro-box">
+                <h4>Aaron Paul (Jesse Pinkman)</h4>
+                <p>Instagram: <a href="https://www.instagram.com/aaronpaul_8" target="_blank">@aaronpaul_8</a></p>
+                <p>Twitter: <a href="https://twitter.com/aaronpaul_8" target="_blank">@aaronpaul_8</a></p>
+
+                <h5>Últimas publicaciones de Instagram:</h5>
+                <div class="row">
+                    <div class="col-md-4">
+                        <a href="https://www.instagram.com/p/CZbbThHhEyy/" target="_blank">
+                            <img src="https://instagram.fsgn2-1.fna.fbcdn.net/v/t51.2885-15/e35/p1080x1080/268045321_982678670508300_5968124602898037137_n.jpg" class="img-fluid rounded" alt="Publicación 1 de Aaron Paul">
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="https://www.instagram.com/p/CYtWw3Fh32x/" target="_blank">
+                            <img src="https://instagram.fsgn2-1.fna.fbcdn.net/v/t51.2885-15/e35/p1080x1080/268735730_239347174948398_7952645323885829331_n.jpg" class="img-fluid rounded" alt="Publicación 2 de Aaron Paul">
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="https://www.instagram.com/p/CXkYAXRgs5q/" target="_blank">
+                            <img src="https://instagram.fsgn2-1.fna.fbcdn.net/v/t51.2885-15/e35/p1080x1080/264896754_264460197799043_1323027984488505390_n.jpg" class="img-fluid rounded" alt="Publicación 3 de Aaron Paul">
+                        </a>
+                    </div>
+                </div>
             </div>
-            <hr>
+            <hr style="background-color:white;">
             
-            <div>
-                <h4>Breaking Bad en Wikipedia</h4>
-                <p>Explora la página oficial de Wikipedia sobre la famosa serie <em>Breaking Bad</em>. Incluye información detallada sobre la trama, los personajes y su impacto cultural.</p>
-                <a href="https://es.wikipedia.org/wiki/Breaking_Bad" class="btn btn-primary" target="_blank">Ir a Wikipedia</a>
+            <!-- Redes sociales de Giancarlo Esposito (Gus Fring) -->
+            <div class="intro-box">
+                <h4>Giancarlo Esposito (Gus Fring)</h4>
+                <p>Instagram: <a href="https://www.instagram.com/giancarloesposito/" target="_blank">@giancarloesposito</a></p>
+                <p>Twitter: <a href="https://twitter.com/quiethandfilms" target="_blank">@quiethandfilms</a></p>
+
+                <h5>Últimas publicaciones de Instagram:</h5>
+                <div class="row">
+                    <div class="col-md-4">
+                        <a href="https://www.instagram.com/p/CZYq3KCA1lg/" target="_blank">
+                            <img src="https://instagram.fsgn2-1.fna.fbcdn.net/v/t51.2885-15/e35/p1080x1080/268504881_457312137801426_2924913350294133138_n.jpg" class="img-fluid rounded" alt="Publicación 1 de Giancarlo Esposito">
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="https://www.instagram.com/p/CXgdg9Lgsz8/" target="_blank">
+                            <img src="https://instagram.fsgn2-1.fna.fbcdn.net/v/t51.2885-15/e35/p1080x1080/263689050_520960028310757_7153421110511433729_n.jpg" class="img-fluid rounded" alt="Publicación 2 de Giancarlo Esposito">
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="https://www.instagram.com/p/CWq9gKLgS89/" target="_blank">
+                            <img src="https://instagram.fsgn2-1.fna.fbcdn.net/v/t51.2885-15/e35/p1080x1080/262491065_298380761135716_4491444250897362343_n.jpg" class="img-fluid rounded" alt="Publicación 3 de Giancarlo Esposito">
+                        </a>
+                    </div>
+                </div>
             </div>
-            <hr>
+            <hr style="background-color:white;">
             
-            <div>
-                <h4>Bootstrap</h4>
-                <p>Aprende sobre Bootstrap, el framework de código abierto más popular para diseñar sitios web responsivos y modernos.</p>
-                <a href="https://getbootstrap.com/" class="btn btn-primary" target="_blank">Ir a Bootstrap</a>
+            <!-- Redes sociales de Bryan Cranston (Walter White) -->
+            <div class="intro-box">
+                <h4>Bryan Cranston (Walter White)</h4>
+                <p>Instagram: <a href="https://www.instagram.com/bryancranston/" target="_blank">@bryancranston</a></p>
+                <p>TikTok: <a href="https://www.tiktok.com/@bryancranston" target="_blank">@bryancranston</a></p>
+
+                <h5>Últimas publicaciones de Instagram:</h5>
+                <div class="row">
+                    <div class="col-md-4">
+                        <a href="https://www.instagram.com/p/CZbbThHhEyy/" target="_blank">
+                            <img src="https://instagram.fsgn2-1.fna.fbcdn.net/v/t51.2885-15/e35/p1080x1080/268045321_982678670508300_5968124602898037137_n.jpg" class="img-fluid rounded" alt="Publicación 1 de Bryan Cranston">
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="https://www.instagram.com/p/CYtWw3Fh32x/" target="_blank">
+                            <img src="https://instagram.fsgn2-1.fna.fbcdn.net/v/t51.2885-15/e35/p1080x1080/268735730_239347174948398_7952645323885829331_n.jpg" class="img-fluid rounded" alt="Publicación 2 de Bryan Cranston">
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="https://www.instagram.com/p/CXkYAXRgs5q/" target="_blank">
+                            <img src="https://instagram.fsgn2-1.fna.fbcdn.net/v/t51.2885-15/e35/p1080x1080/264896754_264460197799043_1323027984488505390_n.jpg" class="img-fluid rounded" alt="Publicación 3 de Bryan Cranston">
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

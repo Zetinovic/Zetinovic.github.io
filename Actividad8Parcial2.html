@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Unidad 02 | Actividad 08 :: Efectos</title> 
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <meta name="author" content="Hugo Zetina Luna">
+  <meta name="author" content="Axel Tiscareño Robledo">
   <meta name="date" content="13/03/2025">
   <meta name="description" content="Efectos y animaciones en tablas y menús">
   <style>
@@ -82,7 +82,7 @@
       transform: rotate(5deg) scale(1.1);
     }
 
-    /* Cubo animado */
+    /* Cubo animado con verde */
     #element {
       width: 100px;
       height: 100px;
@@ -95,7 +95,6 @@
       position: absolute;
       width: 100px;
       height: 100px;
-      background: rgba(100, 100, 255, 0.7);
       line-height: 100px;
       text-align: center;
       font-size: 30px;
@@ -104,12 +103,30 @@
       border: 2px solid #000;
     }
 
-    .front  { transform: translateZ(50px); }
-    .back   { transform: rotateY(180deg) translateZ(50px); }
-    .right  { transform: rotateY(90deg) translateZ(50px); }
-    .left   { transform: rotateY(-90deg) translateZ(50px); }
-    .top    { transform: rotateX(90deg) translateZ(50px); }
-    .bottom { transform: rotateX(-90deg) translateZ(50px); }
+    .front  { 
+      background: rgba(34, 139, 34, 0.7); /* Verde oscuro */
+      transform: translateZ(50px); 
+    }
+    .back   { 
+      background: rgba(0, 128, 0, 0.7); /* Verde medio */
+      transform: rotateY(180deg) translateZ(50px); 
+    }
+    .right  { 
+      background: rgba(144, 238, 144, 0.7); /* Verde claro */
+      transform: rotateY(90deg) translateZ(50px); 
+    }
+    .left   { 
+      background: rgba(0, 255, 0, 0.7); /* Verde más brillante */
+      transform: rotateY(-90deg) translateZ(50px); 
+    }
+    .top    { 
+      background: rgba(50, 205, 50, 0.7); /* Verde césped */
+      transform: rotateX(90deg) translateZ(50px); 
+    }
+    .bottom { 
+      background: rgba(60, 179, 113, 0.7); /* Verde mar */
+      transform: rotateX(-90deg) translateZ(50px); 
+    }
 
     #element {
       animation: girar 5s infinite linear;
@@ -213,3 +230,4 @@
   <div class="arcoiris">Normal</div>
 </body>
 </html>
+

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Unidad 2 | Actividad 04-2 :: Personajes de Breaking Bad</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta charset="utf-8">
+    <meta name="Autor" content="Hugo Zetina Luna">
+    <meta name="Fecha" content="10 de abril del 2025">
+    <meta name="Detalle" content="Personajes principales de Breaking Bad">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Roboto", sans-serif;
+            margin: 20px;
+        }
+
+        h1, h2, h3 {
+            font-family: "Oswald", sans-serif;
+        }
+
+        .toggle-content {
+            display: none;
+        }
+
+        table {
+            border: 1px solid #C5C5C5;
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        table td:first-child {
+            font-weight: bold;
+            padding: 10px;
+            width: 20%;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f0f0f0;
+        }
+
+        table td:not(:first-child) {
+            padding: 1rem;
+        }
+
+        table img {
+            max-width: 150px;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Unidad 2 | Actividad 04-2</h1>
+    <h2>Breaking Bad - Personajes Principales</h2>
+
+    <!-- Walter White -->
+    <h3 onclick="toggleContent('Walter')">
+        <span id="Walter-arrow">►</span> Walter White
+    </h3>
+    <div id="Walter" class="toggle-content">
+        <table>
+            <tr>
+                <td>Nombre</td>
+                <td>Walter Hartwell White</td>
+                <td rowspan="5"><img src="imagenes/walter.jpg" alt="Walter White"></td>
+            </tr>
+            <tr>
+                <td>Edad</td>
+                <td>50 años (al inicio de la serie)</td>
+            </tr>
+            <tr>
+                <td>Alias</td>
+                <td>Heisenberg</td>
+            </tr>
+            <tr>
+                <td>Ocupación</td>
+                <td>Profesor de química / Narcotraficante</td>
+            </tr>
+            <tr>
+                <td>Estado</td>
+                <td>Fallecido</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Jesse Pinkman -->
+    <h3 onclick="toggleContent('Jesse')">
+        <span id="Jesse-arrow">►</span> Jesse Pinkman
+    </h3>
+    <div id="Jesse" class="toggle-content">
+        <table>
+            <tr>
+                <td>Nombre</td>
+                <td>Jesse Bruce Pinkman</td>
+                <td rowspan="5"><img src="imagenes/jesse.jpg" alt="Jesse Pinkman"></td>
+            </tr>
+            <tr>
+                <td>Edad</td>
+                <td>26 años (aproximadamente)</td>
+            </tr>
+            <tr>
+                <td>Alias</td>
+                <td>Cap n’ Cook</td>
+            </tr>
+            <tr>
+                <td>Ocupación</td>
+                <td>Ex-estudiante / Cocinero de metanfetamina</td>
+            </tr>
+            <tr>
+                <td>Estado</td>
+                <td>Vivo</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Skyler White -->
+    <h3 onclick="toggleContent('Skyler')">
+        <span id="Skyler-arrow">►</span> Skyler White
+    </h3>
+    <div id="Skyler" class="toggle-content">
+        <table>
+            <tr>
+                <td>Nombre</td>
+                <td>Skyler White</td>
+                <td rowspan="5"><img src="imagenes/skyler.jpg" alt="Skyler White"></td>
+            </tr>
+            <tr>
+                <td>Edad</td>
+                <td>Finales de sus 40</td>
+            </tr>
+            <tr>
+                <td>Alias</td>
+                <td>—</td>
+            </tr>
+            <tr>
+                <td>Ocupación</td>
+                <td>Contadora / Esposa de Walter</td>
+            </tr>
+            <tr>
+                <td>Estado</td>
+                <td>Viva</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Hank Schrader -->
+    <h3 onclick="toggleContent('Hank')">
+        <span id="Hank-arrow">►</span> Hank Schrader
+    </h3>
+    <div id="Hank" class="toggle-content">
+        <table>
+            <tr>
+                <td>Nombre</td>
+                <td>Hank Schrader</td>
+                <td rowspan="5"><img src="imagenes/hank.jpg" alt="Hank Schrader"></td>
+            </tr>
+            <tr>
+                <td>Edad</td>
+                <td>40s</td>
+            </tr>
+            <tr>
+                <td>Alias</td>
+                <td>—</td>
+            </tr>
+            <tr>
+                <td>Ocupación</td>
+                <td>Agente de la DEA</td>
+            </tr>
+            <tr>
+                <td>Estado</td>
+                <td>Fallecido</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Saul Goodman -->
+    <h3 onclick="toggleContent('Saul')">
+        <span id="Saul-arrow">►</span> Saul Goodman
+    </h3>
+    <div id="Saul" class="toggle-content">
+        <table>
+            <tr>
+                <td>Nombre</td>
+                <td>James Morgan McGill</td>
+                <td rowspan="5"><img src="imagenes/saul.jpg" alt="Saul Goodman"></td>
+            </tr>
+            <tr>
+                <td>Edad</td>
+                <td>40s</td>
+            </tr>
+            <tr>
+                <td>Alias</td>
+                <td>Saul Goodman</td>
+            </tr>
+            <tr>
+                <td>Ocupación</td>
+                <td>Abogado criminalista</td>
+            </tr>
+            <tr>
+                <td>Estado</td>
+                <td>Vivo (en prisión)</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Gus Fring -->
+    <h3 onclick="toggleContent('Gus')">
+        <span id="Gus-arrow">►</span> Gustavo Fring
+    </h3>
+    <div id="Gus" class="toggle-content">
+        <table>
+            <tr>
+                <td>Nombre</td>
+                <td>Gustavo Fring</td>
+                <td rowspan="5"><img src="imagenes/gus.jpg" alt="Gustavo Fring"></td>
+            </tr>
+            <tr>
+                <td>Edad</td>
+                <td>Desconocida</td>
+            </tr>
+            <tr>
+                <td>Alias</td>
+                <td>Gus</td>
+            </tr>
+            <tr>
+                <td>Ocupación</td>
+                <td>Empresario / Narcotraficante</td>
+            </tr>
+            <tr>
+                <td>Estado</td>
+                <td>Fallecido</td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        function toggleContent(id) {
+            var content = document.getElementById(id);
+            var arrow = document.getElementById(id + '-arrow');
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+                arrow.innerHTML = "▼";
+            } else {
+                content.style.display = "none";
+                arrow.innerHTML = "►";
+            }
+        }
+    </script>
+</body>
+</html>

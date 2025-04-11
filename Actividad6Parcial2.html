@@ -1,298 +1,273 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-    <!--- Llenar el title y los metadatos-->
-      <title>Unidad 2 | Actividad 06</title>
-      <meta charset="UTF-8">
-      <link rel="icon" type="image/x-icon" href="favicon.ico">
-      <meta name="Autor" content="Hugo Zetina Luna">
-      <meta name="Fecha" content="13 de marzo de 2025">
-      <meta name="Descripcion" content="Bootstrap">
-      <link rel="stylesheet" type="text/css" href="bootstrap.css">
-    </head>
-    <body>
-      <h1>Unidad 2 | Actividad 06 :: Tema (Bootstrap)</h1>
-      <nav class="navbar fixed-bottom navbar-expand-lg navbar-light bg-light">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav_1" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+<head>
+    <title>Unidad 2 | Actividad 6</title>
+    <link rel="icon" type="image/x-icon" href="favicon1.ico">
+    <meta charset="utf-8">
+    <meta name="Autor" content="Hugo Zetina Luna">
+    <meta name="Fecha" content="Miercoles 5 de Febrero de 2025">
+    <meta name="Descripción" content="Bootstrap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        body {
+            padding-bottom: 0; /* Eliminar el espacio inferior */
+        }
+        .navbar-brand {
+            font-size: 1.5rem;
+        }
+        .bg-custom-white {
+            background-color: #f8f9fa !important;
+        }
+        .navbar-custom-pink {
+            background-color: rgba(255, 192, 203, 0.8) !important;
+        }
+        .navbar {
+            margin-bottom: 0.5rem; /* Espacio entre los navbars */
+        }
+        h2 {
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Unidad 2 | Actividad 6 :: Tema (Bootstrap)</h1>
+    <h2>Menú con tema de color</h2>
+ 
+    <nav class="navbar navbar-expand-sm navbar-light" style="background-color: #343a40;">
+        <a class="navbar-brand" href="#" style="color: #fff;">&#9822</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navDark1" aria-controls="navDark1" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav_1">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Inicio<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">UPSLP</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Conócenos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Oferta Educativa</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Egresados</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Bolsa de trabajo</a>
-              </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li>
-          </ul>
+        <div class="collapse navbar-collapse" id="navDark1">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#" style="color: #fff;">Inicio <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color: #fff;">UPSLP</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color: #fff;">Conocenos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color: #fff;">Oferta educativa</a>
+                </li>
+                <li class="nav-item">
+<a class="nav-link" href="#" style="color: #fff;">Egresados</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true" style="color: #6c757d;">Disabled</a>
+                </li>
+            </ul>
         </div>
-      </nav>
-      <h2>Menú con tema de color</h2>
-      <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">&#127968;</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav_2" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+    </nav>
+ 
+    <nav class="navbar navbar-expand-sm navbar-light" style="background-color: #007bff;">
+        <a class="navbar-brand" href="#" style="color: #fff;">&#9822</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navPrimary1" aria-controls="navPrimary1" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav_2">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Inicio<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">UPSLP</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Conócenos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Oferta Educativa</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Egresados</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Bolsa de trabajo</a>
-              </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li>
-          </ul>
+        <div class="collapse navbar-collapse" id="navPrimary1">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#" style="color: #fff;">Inicio <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color: #fff;">UPSLP</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color: #fff;">Conocenos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color: #fff;">Oferta educativa</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color: #fff;">Egresados</a>
+                </li>
+                <li class="nav-item">
+<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true" style="color: #e9ecef;">Disabled</a>
+                </li>
+            </ul>
         </div>
-      </nav>
-      <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
-        <a class="navbar-brand" href="#">&#127968;</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav_3" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+    </nav>
+ 
+    <nav class="navbar navbar-expand-sm navbar-light" style="background-color: #6c757d;">
+        <a class="navbar-brand" href="#" style="color: #fff;">&#9822</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navSecondary1" aria-controls="navSecondary1" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav_3">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Inicio<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">UPSLP</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Conócenos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Oferta Educativa</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Egresados</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Bolsa de trabajo</a>
-              </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li>
-          </ul>
+        <div class="collapse navbar-collapse" id="navSecondary1">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+ <a class="nav-link" href="#" style="color: #fff;">Inicio <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color: #fff;">UPSLP</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color: #fff;">Conocenos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color: #fff;">Oferta educativa</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color: #fff;">Egresados</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true" style="color: #d3d3d3;">Disabled</a>
+                </li>
+            </ul>
         </div>
-      </nav>
-      <nav class="navbar navbar-expand-md navbar-dark bg-secondary">
-        <a class="navbar-brand" href="#">&#127968;</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav_4" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+    </nav>
+ 
+    <nav class="navbar navbar-light bg-custom-white">
+        <a class="navbar-brand" href="#">&#9822</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navWhite1" aria-controls="navWhite1" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav_4">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Inicio<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">UPSLP</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Conócenos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Oferta Educativa</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Egresados</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Bolsa de trabajo</a>
-              </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li>
-          </ul>
+        <div class="collapse navbar-collapse" id="navWhite1">
+            <ul class="navbar-nav">
+<li class="nav-item active">
+                    <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">UPSLP</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Conocenos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Oferta educativa</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Egresados</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+            </ul>
         </div>
-      </nav>
-      <nav class="navbar navbar-expand-md navbar-dark bg-success">
-        <a class="navbar-brand" href="#">&#127968;</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav_5" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+    </nav>
+ 
+    <nav class="navbar navbar-expand-sm navbar-light" style="background-color: #dc3545;">
+        <a class="navbar-brand" href="#" style="color: #fff;">&#9822</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navDanger1" aria-controls="navDanger1" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav_5">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Inicio<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">UPSLP</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Conócenos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Oferta Educativa</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Egresados</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Bolsa de trabajo</a>
-              </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li>
-          </ul>
+        <div class="collapse navbar-collapse" id="navDanger1">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#" style="color: #fff;">Inicio <span class="sr-only">(current)</span></a>
+                </li>
+<li class="nav-item">
+                    <a class="nav-link" href="#" style="color: #fff;">UPSLP</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color: #fff;">Conocenos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color: #fff;">Oferta educativa</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color: #fff;">Egresados</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true" style="color: #f8d7da;">Disabled</a>
+                </li>
+            </ul>
         </div>
-      </nav>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
-        <a class="navbar-brand" href="#">&#127968;</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav_6" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+    </nav>
+ 
+    <nav class="navbar navbar-expand-sm navbar-light" style="background-color: #ffc107;">
+        <a class="navbar-brand" href="#" style="color: #212529;">&#9822</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navWarning1" aria-controls="navWarning1" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav_6">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Inicio<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">UPSLP</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Conócenos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Oferta Educativa</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Egresados</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Bolsa de trabajo</a>
-              </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li>
-          </ul>
+        <div class="collapse navbar-collapse" id="navWarning1">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#" style="color: #212529;">Inicio <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+<a class="nav-link" href="#" style="color: #212529;">UPSLP</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color: #212529;">Conocenos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color: #212529;">Oferta educativa</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color: #212529;">Egresados</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true" style="color: #e0a800;">Disabled</a>
+                </li>
+            </ul>
         </div>
-      </nav>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-warning">
-        <a class="navbar-brand" href="#">&#127968;</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav_7" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+    </nav>
+ 
+    <nav class="navbar navbar-expand-sm navbar-light" style="background-color: #17a2b8;">
+        <a class="navbar-brand" href="#" style="color: #fff;">&#9822</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navInfo1" aria-controls="navInfo1" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav_7">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Inicio<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">UPSLP</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Conócenos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Oferta Educativa</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Egresados</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Bolsa de trabajo</a>
-              </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li>
-          </ul>
+        <div class="collapse navbar-collapse" id="navInfo1">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#" style="color: #fff;">Inicio <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color: #fff;">UPSLP</a>
+                </li>
+                <li class="nav-item">
+ <a class="nav-link" href="#" style="color: #fff;">Conocenos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color: #fff;">Oferta educativa</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color: #fff;">Egresados</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true" style="color: #b8dae2;">Disabled</a>
+                </li>
+            </ul>
         </div>
-      </nav>
-      <nav class="navbar navbar-expand-xl navbar-dark bg-info">
-        <a class="navbar-brand" href="#">&#127968;</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav_8" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+    </nav>
+ 
+    <nav class="navbar navbar-expand-xl navbar-dark" style="background-color: rgba(186, 36, 216, 0.801);">
+        <a class="navbar-brand" href="#">&#9822</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navPurple1" aria-controls="navPurple1" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav_8">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Inicio<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">UPSLP</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Conócenos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Oferta Educativa</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Egresados</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Bolsa de trabajo</a>
-              </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li>
-          </ul>
+        <div class="collapse navbar-collapse" id="navPurple1">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">UPSLP</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Conocenos</a>
+                </li>
+                <li class="nav-item">
+  <a class="nav-link" href="#">Oferta educativa</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Egresados</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+            </ul>
         </div>
-      </nav>
-      <nav class="navbar navbar-expand-xl navbar-dark" style="background-color: deeppink;">
-        <a class="navbar-brand" href="#">&#127968;</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav_9" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav_9">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Inicio<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">UPSLP</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Conócenos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Oferta Educativa</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Egresados</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Bolsa de trabajo</a>
-              </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li>
-          </ul>
-        </div>
-      </nav><br><br><br>
-      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    </body>
+    </nav>
+   
+ 
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
 </html>

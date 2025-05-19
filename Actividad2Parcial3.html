@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Unidad 3 | Actividad 02</title>
+    <meta name="author" content="Hugo Zetina Luna">
+    <meta name="Fecha" content="29 de abril de 2025">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <h1>Unidad 3 | Actividad 02: Tema (Alert, Confirm & Prompt)</h1>
+    <div id="mensaje"></div>
+
+    <script>
+        const continuar = confirm("¿Desea continuar y acceder al sitio?");
+        if (continuar) {
+            alert("Bienvenido al sitio...");
+            const nombre = prompt("Dime tu nombre:");
+            const mensaje = document.getElementById("mensaje");
+            mensaje.textContent = `Hola ${nombre}, bienvenido al sitio web!!!`;
+        } else {
+            window.location.href = "https://www.google.com.mx/";
+        }
+    </script>
+</body>
+</html>

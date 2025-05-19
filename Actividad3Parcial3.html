@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Unidad 3 | Actividad 02</title>
+    <meta name="author" content="Hugo Zetina Luna">
+    <meta name="date" content="30 Abril de 2023">
+    <meta name="description" content="JavaScript">
+    <link rel="icon" type="image/png" href="favicon.ico">
+</head>
+<body>
+    <h1>Unidad 3 | Actividad 03 - Tema (JavaScript)</h1>
+    <div id="resultado"></div>
+
+    <script>
+        const mensaje = "Menú de opciones:\n1. Sumar\n2. Restar\n3. Multiplicar\n4. Dividir";
+        const operacion = prompt(`${mensaje}\nElija opción deseada:`);
+        const val1 = Number(prompt("Digite un primer valor:"));
+        const val2 = Number(prompt("Digite un segundo valor:"));
+        const resultadoDiv = document.getElementById("resultado");
+
+        let resultadoTexto = "";
+
+        switch (operacion) {
+            case '1':
+  resultadoTexto = `<h2>Operación Suma:</h2><code>${val1} + ${val2} = ${val1 + val2}</code>`;
+                break;
+            case '2':
+                resultadoTexto = `<h2>Operación Resta:</h2><code>${val1} - ${val2} = ${val1 - val2}</code>`;
+                break;
+            case '3':
+                resultadoTexto = `<h2>Operación Multiplicación:</h2><code>${val1} * ${val2} = ${val1 * val2}</code>`;
+                break;
+            case '4':
+                if (val2 !== 0) {
+                    resultadoTexto = `<h2>Operación División:</h2><code>${val1} / ${val2} = ${val1 / val2}</code>`;
+                } else {
+                    resultadoTexto = `<h2>Error:</h2><code>No se puede dividir entre cero.</code>`;
+                }
+                break;
+            default:
+                resultadoTexto = `<h2>Opción inválida</h2>`;
+        }
+
+        resultadoDiv.innerHTML = resultadoTexto;
+    </script>
+</body>
+</html>

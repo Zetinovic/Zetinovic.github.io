@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Menú Navegación</title>
+  <title>Breaking Bad - Fan Site</title>
   <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk3PORQtTCE_-dASw6n459WDG41ZkVOOMd1Q&s" type="image/x-icon" />
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
@@ -19,6 +19,102 @@
     rel="stylesheet"
   />
   <style>
+    /* Estilos para la portada */
+    .cover {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
+                  url('https://wallpapercave.com/wp/wp4923982.jpg') no-repeat center center;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      z-index: 1000;
+      transition: all 1s ease;
+    }
+    
+    .cover.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+    
+    .cover-content {
+      background: rgba(0, 0, 0, 0.7);
+      border: 3px solid #FF4500;
+      border-radius: 15px;
+      padding: 30px;
+      max-width: 800px;
+      width: 90%;
+      text-align: center;
+      box-shadow: 0 0 30px rgba(255, 69, 0, 0.5);
+      animation: glow 2s infinite alternate;
+    }
+    
+    .cover-logo {
+      max-width: 400px;
+      width: 100%;
+      margin-bottom: 20px;
+      filter: drop-shadow(0 0 10px rgba(255, 69, 0, 0.8));
+    }
+    
+    .cover-title {
+      font-size: 3.5rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #FF4500;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      text-shadow: 0 0 10px rgba(255, 69, 0, 0.8);
+    }
+    
+    .cover-subtitle {
+      font-size: 1.3rem;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+    
+    .enter-btn {
+      padding: 12px 30px;
+      font-size: 1.2rem;
+      background-color: rgba(255, 69, 0, 0.8);
+      border: none;
+      border-radius: 50px;
+      color: white;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    
+    .enter-btn:hover {
+      background-color: rgba(255, 69, 0, 1);
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(255, 69, 0, 0.6);
+    }
+    
+    @keyframes glow {
+      from {
+        box-shadow: 0 0 20px rgba(255, 69, 0, 0.5);
+      }
+      to {
+        box-shadow: 0 0 40px rgba(255, 69, 0, 0.8);
+      }
+    }
+    
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    
+    /* Resto de estilos existentes */
     body {
       font-family: "Roboto", sans-serif;
       text-align: center;
@@ -138,6 +234,13 @@
     }
   </style>
   <script>
+    // Función para ocultar la portada
+    function hideCover() {
+      document.querySelector('.cover').classList.add('hidden');
+      // Mostrar la sección de inicio por defecto
+      showSection('intro');
+    }
+    
     function showSection(sectionId) {
       document.querySelectorAll(".content > div").forEach(
         (div) => (div.style.display = "none")
@@ -147,6 +250,23 @@
   </script>
 </head>
 <body>
+  <!-- Portada -->
+  <div class="cover">
+    <div class="cover-content">
+      <!-- Cambié la imagen por la más icónica de Walter White con sombrero y gafas -->
+      <img src="https://i.redd.it/9qegq3a9v5q11.jpg" alt="Heisenberg" class="cover-logo">
+      <h1 class="cover-title">Breaking Bad</h1>
+      <p class="cover-subtitle">
+        Adéntrate en el oscuro y fascinante universo de Walter White, un profesor de química que se transforma en el temido narcotraficante Heisenberg. 
+        Explora la mejor serie de televisión según Guinness World Records, con 16 premios Emmy y una legión de fans en todo el mundo.
+      </p>
+      <button class="enter-btn" onclick="hideCover()">
+        <i class="fas fa-skull"></i> Entrar al Sitio
+      </button>
+    </div>
+  </div>
+
+  <!-- Resto del contenido HTML permanece igual -->
   <div class="menu-container">
     <div class="menu-logo">
       <img
@@ -182,7 +302,7 @@
             >
           </li>
 
-          <!-- Nuevo menú Personajes -->
+          <!-- Menú Personajes -->
           <li class="nav-item dropdown">
             <a
               class="nav-link dropdown-toggle"
@@ -275,8 +395,6 @@
             <a class="nav-link" href="#" onclick="showSection('elcamino')">El Camino</a>
         </li>
 
-
-
           <li class="nav-item">
             <a class="nav-link" href="#" onclick="showSection('referencias')"
               >Referencias</a
@@ -292,7 +410,7 @@
   <h2>Sobre Breaking Bad</h2>
 
   <!-- Carrusel de imágenes -->
-  <div id="breakingBadCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
+ <div id="breakingBadCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img
@@ -328,17 +446,80 @@
 
   <p>
     <em>Breaking Bad</em> es una serie de televisión estadounidense que se
-        emitió entre 2008 y 2013, creada y producida por Vince Gilligan. Narra
-        la historia de Walter White (Bryan Cranston), un profesor de química con
-        problemas económicos a quien le diagnostican un cáncer de pulmón
-        inoperable. Para pagar su tratamiento y asegurar el futuro económico de
-        su familia, comienza a cocinar y vender metanfetamina junto con Jesse
-        Pinkman (Aaron Paul), un antiguo alumno suyo. La serie, ambientada y
-        producida en Albuquerque (Nuevo México), se caracteriza por sus escenarios
-        desérticos y por la tendencia en la historia de poner a sus personajes en
-        situaciones que aparentemente no tienen salida, lo que llevó a que su
-        creador la describa como un wéstern contemporáneo.
+    emitió entre 2008 y 2013, creada y producida por Vince Gilligan. Narra
+    la historia de Walter White (Bryan Cranston), un profesor de química con
+    problemas económicos a quien le diagnostican un cáncer de pulmón
+    inoperable. Para pagar su tratamiento y asegurar el futuro económico de
+    su familia, comienza a cocinar y vender metanfetamina junto con Jesse
+    Pinkman (Aaron Paul), un antiguo alumno suyo. La serie, ambientada y
+    producida en Albuquerque (Nuevo México), se caracteriza por sus escenarios
+    desérticos y por la tendencia en la historia de poner a sus personajes en
+    situaciones que aparentemente no tienen salida, lo que llevó a que su
+    creador la describa como un wéstern contemporáneo.
   </p>
+  
+  <!-- Redes sociales de los actores -->
+  <div class="mt-4">
+    <h4>Redes sociales de los actores principales:</h4>
+    <div class="row text-center">
+      <div class="col-md-4 mb-3">
+        <h5>Bryan Cranston (Walter White)</h5>
+        <a href="https://www.instagram.com/bryancranston/" target="_blank" class="btn btn-outline-primary me-2">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a href="https://twitter.com/BryanCranston" target="_blank" class="btn btn-outline-info">
+          <i class="fab fa-twitter"></i> Twitter
+        </a>
+      </div>
+      <div class="col-md-4 mb-3">
+        <h5>Aaron Paul (Jesse Pinkman)</h5>
+        <a href="https://www.instagram.com/aaronpaul/" target="_blank" class="btn btn-outline-primary me-2">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a href="https://twitter.com/aaronpaul" target="_blank" class="btn btn-outline-info">
+          <i class="fab fa-twitter"></i> Twitter
+        </a>
+      </div>
+      <div class="col-md-4 mb-3">
+        <h5>Anna Gunn (Skyler White)</h5>
+        <a href="https://www.instagram.com/annagunnofficial/" target="_blank" class="btn btn-outline-primary me-2">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a href="https://twitter.com/AnnaGunn" target="_blank" class="btn btn-outline-info">
+          <i class="fab fa-twitter"></i> Twitter
+        </a>
+      </div>
+    </div>
+    <div class="row text-center">
+      <div class="col-md-4 mb-3">
+        <h5>Dean Norris (Hank Schrader)</h5>
+        <a href="https://www.instagram.com/deanjnorris/" target="_blank" class="btn btn-outline-primary me-2">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a href="https://twitter.com/deanjnorris" target="_blank" class="btn btn-outline-info">
+          <i class="fab fa-twitter"></i> Twitter
+        </a>
+      </div>
+      <div class="col-md-4 mb-3">
+        <h5>Bob Odenkirk (Saul Goodman)</h5>
+        <a href="https://www.instagram.com/bobodenkirk/" target="_blank" class="btn btn-outline-primary me-2">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a href="https://twitter.com/mrbobodenkirk" target="_blank" class="btn btn-outline-info">
+          <i class="fab fa-twitter"></i> Twitter
+        </a>
+      </div>
+      <div class="col-md-4 mb-3">
+        <h5>Giancarlo Esposito (Gus Fring)</h5>
+        <a href="https://www.instagram.com/therealesposito/" target="_blank" class="btn btn-outline-primary me-2">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a href="https://twitter.com/quiethandfilms" target="_blank" class="btn btn-outline-info">
+          <i class="fab fa-twitter"></i> Twitter
+        </a>
+      </div>
+    </div>
+  </div>
 </div>
 
 
@@ -399,20 +580,39 @@
       </div>
     </div>
 
-    <div
+           <div
       id="walter"
       style="display: none; text-align: center;"
       class="intro-box"
       title="Walter White"
     >
-      <h3>Walter White</h3>
-      <img src="img/Walter.png"style="width: 200px; margin: 20px 0;" />
-      <p>
-        Walter White es un profesor de química que, tras ser diagnosticado con
-        cáncer, decide fabricar metanfetamina para asegurar el bienestar económico
-        de su familia. Su transformación a lo largo de la serie es profunda y
-        dramática.
-      </p>
+      <h3>Walter White / Heisenberg</h3>
+      <img src="img/Walter.png" style="width: 200px; margin: 20px 0;" />
+      <div id="walter-short">
+        <p>
+          Protagonista de la serie, Walter White es un profesor de química que se convierte en un poderoso narcotraficante tras ser diagnosticado con cáncer. Su transformación en "Heisenberg" es el eje central de la historia.
+        </p>
+        <button class="btn btn-warning" onclick="showFullInfo('walter')">Más información</button>
+      </div>
+      <div id="walter-full" style="display:none;">
+        <p>
+          <strong>Interpretado por:</strong> Bryan Cranston<br>
+          <strong>Ocupación:</strong> Profesor de química, fabricante de metanfetamina<br>
+          <strong>Rol en la serie:</strong> Protagonista y antagonista
+        </p>
+        <p>
+          Walter White comienza como un profesor de química de secundaria con problemas económicos y un diagnóstico de cáncer terminal. Su transformación en el despiadado narcotraficante "Heisenberg" es el eje central de la serie.
+        </p>
+        <p>
+          <strong>Momentos clave:</strong><br>
+          - Su primera matanza (Episodio "Crazy Handful of Nothin'")<br>
+          - "I am the danger" (Temporada 4)<br>
+          - El enfrentamiento con Gus Fring (Temporada 4)<br>
+          - Confesión telefónica a Skyler (Episodio "Ozymandias")<br>
+          - Muerte en el laboratorio (Episodio "Felina")
+        </p>
+        <button class="btn btn-secondary" onclick="hideFullInfo('walter')">Mostrar menos</button>
+      </div>
     </div>
 
     <div
@@ -422,70 +622,248 @@
       title="Jesse Pinkman"
     >
       <h3>Jesse Pinkman</h3>
-      <img src="img/Jesse.png"style="width: 200px; margin: 20px 0;" />
-      <p>
-        Jesse Pinkman es un ex alumno de Walter White que se convierte en su socio
-        en la fabricación de metanfetamina. Su carácter evoluciona desde un joven
-        problemático hasta un personaje complejo y con mucha profundidad emocional.
-      </p>
+      <img src="img/Jesse.png" style="width: 200px; margin: 20px 0;" />
+      <div id="jesse-short">
+        <p>
+          Ex alumno de Walter White que se convierte en su socio en el negocio de la metanfetamina. Su evolución desde un joven problemático hasta un personaje profundamente complejo es uno de los arcos más notables de la serie.
+        </p>
+        <button class="btn btn-warning" onclick="showFullInfo('jesse')">Más información</button>
+      </div>
+      <div id="jesse-full" style="display:none;">
+        <p>
+          <strong>Interpretado por:</strong> Aaron Paul<br>
+          <strong>Ocupación:</strong> Fabricante y distribuidor de metanfetamina<br>
+          <strong>Rol en la serie:</strong> Coprotagonista
+        </p>
+        <p>
+          Jesse Pinkman es el antihéroe emocional de la serie. A diferencia de Walter, Jesse mantiene un fuerte sentido moral que lo atormenta a lo largo de la serie.
+        </p>
+        <p>
+          <strong>Arcos importantes:</strong><br>
+          - Relación con Jane Margolis y su posterior muerte<br>
+          - Adicción a las drogas y rehabilitación<br>
+          - Esclavitud bajo los neonazis<br>
+          - Escape final en "El Camino"
+        </p>
+        <button class="btn btn-secondary" onclick="hideFullInfo('jesse')">Mostrar menos</button>
+      </div>
     </div>
 
-   <div
-  id="skyler"
-  style="display: none; text-align: center;"
-  class="intro-box"
-  title="Skyler White"
->
-  <h3>Skyler White</h3>
-  <img src="img/Skyler.png" style="width: 200px; margin: 20px 0;" />
-  <p>
-    Esposa de Walter White, quien enfrenta grandes dilemas morales y personales
-    a medida que descubre las actividades ilegales de su esposo.
-  </p>
-</div>
+    <div
+      id="skyler"
+      style="display: none; text-align: center;"
+      class="intro-box"
+      title="Skyler White"
+    >
+      <h3>Skyler White</h3>
+      <img src="img/Skyler.png" style="width: 200px; margin: 20px 0;" />
+      <div id="skyler-short">
+        <p>
+          Esposa de Walter White y madre de Walter Jr. y Holly. Su personaje muestra el impacto de las acciones de Walter en su familia y su propia transformación de ama de casa a cómplice involuntaria.
+        </p>
+        <button class="btn btn-warning" onclick="showFullInfo('skyler')">Más información</button>
+      </div>
+      <div id="skyler-full" style="display:none;">
+        <p>
+          <strong>Interpretada por:</strong> Anna Gunn<br>
+          <strong>Ocupación:</strong> Contadora, lavadora de dinero<br>
+          <strong>Rol en la serie:</strong> Esposa de Walter y conciencia moral
+        </p>
+        <p>
+          Skyler comienza como una esposa y madre preocupada, pero se transforma en cómplice involuntaria de las actividades criminales de Walter. Su personaje es fundamental para mostrar el impacto del crimen en la familia White.
+        </p>
+        <p>
+          <strong>Momentos clave:</strong><br>
+          - Descubrimiento de las actividades de Walter<br>
+          - "I fucked Ted" (infidelidad estratégica)<br>
+          - Participación en el lavado de dinero<br>
+          - Confrontación final con Walter
+        </p>
+        <button class="btn btn-secondary" onclick="hideFullInfo('skyler')">Mostrar menos</button>
+      </div>
+    </div>
 
-    <div id="hank" style="display: none; text-align: center;" class="intro-box" title="Hank Schrader">
+    <div
+      id="hank"
+      style="display: none; text-align: center;"
+      class="intro-box"
+      title="Hank Schrader"
+    >
       <h3>Hank Schrader</h3>
-      <img src="img/Hank.png"style="width: 200px; margin: 20px 0;" />
-      <p>
-        Agente de la DEA y cuñado de Walter White, dedicado a luchar contra el
-        narcotráfico sin saber inicialmente la identidad de Heisenberg.
-      </p>
+      <img src="img/Hank.png" style="width: 200px; margin: 20px 0;" />
+      <div id="hank-short">
+        <p>
+          Cuñado de Walter White y agente de la DEA. Su búsqueda del misterioso "Heisenberg" crea una de las ironías más dramáticas de la serie, sin saber que el criminal que persigue es su propio familiar.
+        </p>
+        <button class="btn btn-warning" onclick="showFullInfo('hank')">Más información</button>
+      </div>
+      <div id="hank-full" style="display:none;">
+        <p>
+          <strong>Interpretado por:</strong> Dean Norris<br>
+          <strong>Ocupación:</strong> Agente de la DEA<br>
+          <strong>Rol en la serie:</strong> Antagonista (sin saberlo)
+        </p>
+        <p>
+          Hank es el cuñado de Walter y un agente de la DEA que persigue sin saberlo a su propio familiar. Su personaje muestra la ironía trágica de la serie.
+        </p>
+        <p>
+          <strong>Desarrollo:</strong><br>
+          - Comienza como un macho alfa bromista<br>
+          - Sufre estrés postraumático tras un ataque<br>
+          - Se obsesiona con la caza de Heisenberg<br>
+          - Descubre la verdad sobre Walter
+        </p>
+        <button class="btn btn-secondary" onclick="hideFullInfo('hank')">Mostrar menos</button>
+      </div>
     </div>
 
-    <div id="saul" style="display: none; text-align: center;" class="intro-box" title="Saúl Goodman">
-      <h3>Saúl Goodman</h3>
-      <img src="img/Saul.png"style="width: 200px; margin: 20px 0;" />
-      <p>
-        Abogado criminalista que actúa como el asesor legal y representante de
-        Walter y Jesse, conocido por su estilo poco ortodoxo y humorístico pero efectivo.
-      </p>
-    </div>
-    
-    <div id="gustavo" style="display: none; text-align: center;" class="intro-box" title="Gustavo Fring">
-  <h3>Gustavo Fring</h3>
-  <img src="img/Gustavo.png"style="width: 200px; margin: 20px 0;" />
-  <p>
-    Propietario de la cadena de restaurantes Los Pollos Hermanos, Gustavo Fring es uno de los mayores narcotraficantes del suroeste de los Estados Unidos. Su carácter meticuloso y reservado lo convierte en alguien a quien temer.
-  </p>
+    <div
+      id="saul"
+      style="display: none; text-align: center;"
+      class="intro-box"
+      title="Saúl Goodman"
+    >
+      <h3>Saúl Goodman (Jimmy McGill)</h3>
+      <img src="img/Saul.png" style="width: 200px; margin: 20px 0;" />
+      <div id="saul-short">
+        <p>
+          El extravagante abogado criminalista que representa a Walter y Jesse. Su personaje, lleno de humor y astucia legal, se hizo tan popular que generó su propia serie spin-off: "Better Call Saul".
+        </p>
+        <button class="btn btn-warning" onclick="showFullInfo('saul')">Más información</button>
+      </div>
+      <div id="saul-full" style="display:none;">
+        <p>
+          <strong>Interpretado por:</strong> Bob Odenkirk<br>
+          <strong>Ocupación:</strong> Abogado criminalista<br>
+          <strong>Rol en la serie:</strong> Alivio cómico y conexión con el bajo mundo
+        </p>
+        <p>
+          Saul es el abogado "criminal" que ayuda a Walter y Jesse a navegar el mundo del crimen. Su personaje es tan popular que generó su propia serie spin-off, "Better Call Saul".
+        </p>
+        <p>
+          <strong>Características:</strong><br>
+          - Estrafalario y carismático<br>
+          - Conexiones con el crimen organizado<br>
+          - Maestro del engaño y la manipulación legal<br>
+          - Tiene su propio equipo de investigadores (Mike)
+        </p>
+        <button class="btn btn-secondary" onclick="hideFullInfo('saul')">Mostrar menos</button>
+      </div>
     </div>
 
-    <div id="mike" style="display: none; text-align: center;" class="intro-box" title="Mike Ehrmantraut">
-    <h3>Mike Ehrmantraut</h3>
-   <img src="img/Mike.png"style="width: 200px; margin: 20px 0;" />
-    <p>
-        Ex policía convertido en solucionador de problemas para Gus Fring. Mike es experto en vigilancia, inteligencia y operaciones encubiertas. Tiene un fuerte código moral, aunque 	trabaja en el mundo criminal.
-    </p>
+    <div
+      id="gustavo"
+      style="display: none; text-align: center;"
+      class="intro-box"
+      title="Gustavo Fring"
+    >
+      <h3>Gustavo Fring</h3>
+      <img src="img/Gustavo.png" style="width: 200px; margin: 20px 0;" />
+      <div id="gustavo-short">
+        <p>
+          Dueño de la cadena de pollos fritos "Los Pollos Hermanos" y poderoso narcotraficante. Gus es uno de los villanos más memorables de la televisión, conocido por su calma imperturbable y métodos meticulosos.
+        </p>
+        <button class="btn btn-warning" onclick="showFullInfo('gustavo')">Más información</button>
+      </div>
+      <div id="gustavo-full" style="display:none;">
+        <p>
+          <strong>Interpretado por:</strong> Giancarlo Esposito<br>
+          <strong>Ocupación:</strong> Empresario y narcotraficante<br>
+          <strong>Rol en la serie:</strong> Antagonista principal (temporadas 3-4)
+        </p>
+        <p>
+          Gus es uno de los villanos más memorables de la televisión. Dueño de la cadena Los Pollos Hermanos, es un narcotraficante meticuloso que opera bajo una fachada de respetabilidad.
+        </p>
+        <p>
+          <strong>Características únicas:</strong><br>
+          - Control absoluto de sus emociones<br>
+          - Venganza personal contra el cartel mexicano<br>
+          - Relación compleja con Walter (admiración y rivalidad)<br>
+          - Muerte icónica (medio rostro destruido)
+        </p>
+        <button class="btn btn-secondary" onclick="hideFullInfo('gustavo')">Mostrar menos</button>
+      </div>
     </div>
 
-    <div id="walterjr" style="display: none; text-align: center;" class="intro-box" title="Walter Jr.">
-    <h3>Walter Jr.</h3>
-    <img src="img/walterJr.png"style="width: 200px; margin: 20px 0;" />
-    <p>
-        Hijo de Walter y Skyler White. Vive con parálisis cerebral, pero es un joven optimista, leal y que idolatra a su padre, sin conocer su doble vida como narcotraficante.
-    </p>
+    <div
+      id="mike"
+      style="display: none; text-align: center;"
+      class="intro-box"
+      title="Mike Ehrmantraut"
+    >
+      <h3>Mike Ehrmantraut</h3>
+      <img src="img/Mike.png" style="width: 200px; margin: 20px 0;" />
+      <div id="mike-short">
+        <p>
+          Ex policía convertido en solucionador de problemas para el mundo criminal. Mike es conocido por su profesionalismo, su código de honor personal y su relación especial con su nieta Kaylee.
+        </p>
+        <button class="btn btn-warning" onclick="showFullInfo('mike')">Más información</button>
+      </div>
+      <div id="mike-full" style="display:none;">
+        <p>
+          <strong>Interpretado por:</strong> Jonathan Banks<br>
+          <strong>Ocupación:</strong> Ex policía, solucionador de problemas<br>
+          <strong>Rol en la serie:</strong> Seguridad de Gus, luego de Walter
+        </p>
+        <p>
+          Mike es un personaje lacónico pero profundamente moral (dentro de su propio código). Ex policía corrupto, trabaja primero para Gus Fring y luego para Walter, aunque desprecia sus métodos.
+        </p>
+        <p>
+          <strong>Momentos destacados:</strong><br>
+          - "Half measures" monólogo (Temporada 3)<br>
+          - Relación con su nieta Kaylee<br>
+          - Asesinato ordenado por Walter (Temporada 5)<br>
+          - Protagonista en "Better Call Saul"
+        </p>
+        <button class="btn btn-secondary" onclick="hideFullInfo('mike')">Mostrar menos</button>
+      </div>
     </div>
 
+    <div
+      id="walterjr"
+      style="display: none; text-align: center;"
+      class="intro-box"
+      title="Walter Jr."
+    >
+      <h3>Walter White Jr. (Flynn)</h3>
+      <img src="img/walterJr.png" style="width: 200px; margin: 20px 0;" />
+      <div id="walterjr-short">
+        <p>
+          Hijo adolescente de Walter y Skyler White que vive con parálisis cerebral. Su personaje representa la inocencia y el impacto familiar de las acciones de su padre.
+        </p>
+        <button class="btn btn-warning" onclick="showFullInfo('walterjr')">Más información</button>
+      </div>
+      <div id="walterjr-full" style="display:none;">
+        <p>
+          <strong>Interpretado por:</strong> RJ Mitte<br>
+          <strong>Ocupación:</strong> Estudiante<br>
+          <strong>Rol en la serie:</strong> Hijo de Walter y Skyler
+        </p>
+        <p>
+          Walter Jr. es un adolescente con parálisis cerebral que idolatra a su padre sin conocer sus actividades criminales. Su personaje muestra el impacto familiar del viaje de Walter hacia la oscuridad.
+        </p>
+        <p>
+          <strong>Arco emocional:</strong><br>
+          - Conflicto entre sus padres<br>
+          - Uso del nombre "Flynn" como rebelión<br>
+          - Escena del cuchillo (confrontación con Walter)<br>
+          - Rechazo final a su padre
+        </p>
+        <button class="btn btn-secondary" onclick="hideFullInfo('walterjr')">Mostrar menos</button>
+      </div>
+    </div>
+
+    <script>
+      function showFullInfo(character) {
+        document.getElementById(character+'-short').style.display = 'none';
+        document.getElementById(character+'-full').style.display = 'block';
+      }
+      
+      function hideFullInfo(character) {
+        document.getElementById(character+'-full').style.display = 'none';
+        document.getElementById(character+'-short').style.display = 'block';
+      }
+    </script>
 
     <div id="hugo" style="display: none" class="intro-box" title="Hugo Zetina Luna">
   <h3>Hugo Zetina Luna</h3>
@@ -536,7 +914,7 @@
     </p>
     </div>
     
-    <div id="mejorescapitulos" style="display: none;" class="intro-box">
+   <div id="mejorescapitulos" style="display: none;" class="intro-box">
   <h3>Mejores capítulos por temporada</h3>
   <p>A continuación se muestra una tabla con los episodios mejor valorados de cada temporada de <strong>Breaking Bad</strong>, según la crítica y los fans:</p>
   
@@ -547,42 +925,126 @@
           <th>Temporada</th>
           <th>Capítulo</th>
           <th>Descripción</th>
+          <th>Imagen</th>
+          <th>Video</th>
         </tr>
       </thead>
       <tbody>
+        <!-- Temporada 1 -->
         <tr>
           <td>Temporada 1</td>
           <td>Pilot</td>
           <td>El inicio de todo: Walter White comienza su transformación tras descubrir que tiene cáncer.</td>
+          <td class="image-cell">
+            <img src="img/piloto.png">
+          </td>
+          <td>
+            <div class="video-cell">
+              <iframe width="200" height="120" src="https://www.youtube.com/embed/HhesaQXLuRY" title="Breaking Bad Pilot Recap" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </td>
         </tr>
+        
+        <!-- Temporada 2 -->
         <tr>
           <td>Temporada 2</td>
           <td>Peekaboo</td>
           <td>Jesse se enfrenta a una pareja de drogadictos mientras Walter miente a su familia.</td>
+          <td class="image-cell">
+            <img src="img/Peekaboo.png">
+          </td>
+          <td>
+            <div class="video-cell">
+              <iframe width="200" height="120" src="https://www.youtube.com/embed/2oXqbLhMS_A" title="Peekaboo Episode Recap" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </td>
         </tr>
+        
+        <!-- Temporada 3 -->
         <tr>
           <td>Temporada 3</td>
           <td>One Minute</td>
           <td>Hank se enfrenta a los primos Salamanca en una escena tensa e impactante.</td>
+          <td class="image-cell">
+            <img src="img/one minute.png">
+          <td>
+            <div class="video-cell">
+              <iframe width="200" height="120" src="https://www.youtube.com/embed/1JLUn2DFW4w" title="One Minute Scene" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </td>
         </tr>
+        
+        <!-- Temporada 4 -->
         <tr>
           <td>Temporada 4</td>
           <td>Face Off</td>
           <td>El épico enfrentamiento entre Walter y Gustavo Fring llega a su clímax.</td>
+          <td class="image-cell">
+            <img src="img/faceoff.png">
+          </td>
+          <td>
+            <div class="video-cell">
+              <iframe width="200" height="120" src="https://www.youtube.com/embed/Xs6_vecSv2Y" title="Face Off Scene" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </td>
         </tr>
+        
+        <!-- Temporada 5 -->
         <tr>
           <td>Temporada 5</td>
           <td>Ozymandias</td>
           <td>Considerado el mejor episodio de la serie, donde todo se desmorona para Walter.</td>
+          <td class="image-cell">
+            <img src="img/ozymadias.png">
+          <td>
+            <div class="video-cell">
+              <iframe width="200" height="120" src="https://www.youtube.com/embed/DawjUVitPEo" title="Ozymandias Analysis" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </td>
         </tr>
       </tbody>
     </table>
   </div>
+  
+  <style>
+    /* Estilos para la sección de mejores capítulos */
+    .image-cell img {
+      width: 150px;
+      height: auto;
+      border-radius: 5px;
+      border: 2px solid #ff4500;
+      transition: transform 0.3s ease;
+      display: block; /* Asegura que la imagen se muestre como bloque */
+      margin: 0 auto; /* Centra la imagen */
+    }
+    
+    .image-cell img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px rgba(255, 69, 0, 0.7);
+    }
+    
+    .video-cell iframe {
+      border-radius: 5px;
+      border: 2px solid #ff4500;
+      display: block; /* Asegura que el iframe se muestre como bloque */
+      margin: 0 auto; /* Centra el video */
+    }
+    
+    /* Ajustes para tablas responsivas */
+    @media (max-width: 768px) {
+      .image-cell img {
+        width: 100px;
+      }
+      
+      .video-cell iframe {
+        width: 150px;
+        height: 90px;
+      }
+    }
+  </style>
 </div>
 
-
-
-    <div id="jamil" style="display: none" class="intro-box" title="Jamil Rivera Acosta">
+<div id="jamil" style="display: none" class="intro-box" title="Jamil Rivera Acosta">
       <h3>Jamil Rivera Acosta</h3>
       <img src="img/jam.png"/>
       <p>Correo: 187994@upslp.edu.mx</p>
@@ -657,7 +1119,7 @@
               >
             </li>
             <li>
-              <a
+           <a
                 class="reference-link"
                 href="https://www.youtube.com/watch?v=pNhG9kll1k0"
                 target="_blank"
@@ -665,6 +1127,15 @@
                 >Análisis de Felina</a
               >
             </li>
+	    <li>
+	    <a
+                class="reference-link"
+                href="https://www.instagram.com/breakingbad/?hl=es"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Instagram de la serie</a
+              >
+	    </li>
           </ul>
         </li>
         <li>
